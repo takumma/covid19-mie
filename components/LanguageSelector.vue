@@ -18,7 +18,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { Vue, Component } from 'vue-property-decorator'
 import EarthIcon from '@/static/earth.svg'
 import SelectMenuIcon from '@/static/selectmenu.svg'
@@ -26,7 +26,7 @@ import SelectMenuIcon from '@/static/selectmenu.svg'
   components: { EarthIcon, SelectMenuIcon }
 })
 export default class LanguageSelector extends Vue {
-  currentLocaleCode: string = this.$root.$i18n.locale
+  currentLocaleCode = this.$root.$i18n.locale
   handleChangeLanguage() {
       console.log(this.currentLocaleCode)
       this.$root.$i18n.setLocale(this.currentLocaleCode)
