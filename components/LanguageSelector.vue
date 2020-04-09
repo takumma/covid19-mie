@@ -29,7 +29,7 @@ export default class LanguageSelector extends Vue {
   currentLocaleCode: string = this.$root.$i18n.locale
   handleChangeLanguage() {
       console.log(this.currentLocaleCode)
-      this.$root.$i18n.setLocale(this.currentLocaleCode)
+      this.$i18n.locale = (this.$i18n.locale === 'ja') ? 'en' : 'ja'
   }
 }
 </script>
