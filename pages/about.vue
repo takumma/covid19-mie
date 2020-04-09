@@ -182,7 +182,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import TextCard from '@/components/TextCard.vue'
 import { MetaInfo } from 'vue-meta'
 
@@ -190,9 +190,9 @@ export default {
   components: {
     TextCard
   },
-  head(): MetaInfo {
+  head() {
     return {
-      title: this.$t('当サイトについて') as string
+      title: this.$t('当サイトについて')
     }
   }
 }
